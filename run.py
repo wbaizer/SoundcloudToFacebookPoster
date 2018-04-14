@@ -12,8 +12,8 @@ def run(sc):
 	for channel_id in channel_ids:
 		soundcloud_scraper.run(channel_id)
 		facebook_poster.run(channel_id)
-	print "Program run. Sleeping for 5 mins..."
-	s.enter(300, 1, run, (sc,))
+	print "Program run. Sleeping for 2 hours..."
+	s.enter(7200, 1, run, (sc,))
 		
 if __name__ == "__main__":
 	s = sched.scheduler(time.time, time.sleep)
